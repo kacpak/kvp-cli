@@ -35,10 +35,16 @@ program
   .argument('<config-file>', 'path to configuration file to edit', resolveFilePath)
   .argument('<key>', 'key to set')
   .argument('<value>', 'new value for a key')
-  .action((configFilePath, key, value) => {
+  .option('-s, --no-sections', `won't add [section] headers for nested keys`)
+  .action((configFilePath, key, value, options) => {
+    console.log(options);
     const configExists = fs.existsSync(configFilePath);
     const config = configExists ? ini.parse(fs.readFileSync(configFilePath, 'utf-8')) : {};
-    set(config, key, value);
+    if (options.sections) {
+      set(config, key, value);
+    } else {
+      config[key] = value;
+    }
     const newConfigContent = ini.stringify(config);
     if (!configExists) {
       fs.mkdirSync(path.dirname(configFilePath));
