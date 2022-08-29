@@ -37,7 +37,6 @@ program
   .argument('<value>', 'new value for a key')
   .option('-s, --no-sections', `won't add [section] headers for nested keys`)
   .action((configFilePath, key, value, options) => {
-    console.log(options);
     const configExists = fs.existsSync(configFilePath);
     const config = configExists ? ini.parse(fs.readFileSync(configFilePath, 'utf-8')) : {};
     if (options.sections) {
