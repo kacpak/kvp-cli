@@ -12,7 +12,7 @@
     "url": "https://github.com/kacpak/kvp-cli"
   },
   "engines": {
-    "node": ">16"
+    "node": ">=16"
   },
   "scripts": {
     "build": "tsc"
