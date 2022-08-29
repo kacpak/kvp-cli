@@ -1,0 +1,36 @@
+{
+  "name": "kvp-cli",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "author": "Mateusz Kasprzak <kacpak@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "bin": "./dist/index.js",
+  "files": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kacpak/kvp-cli"
+  },
+  "engines": {
+    "node": ">16"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "commander": "^9.4.0",
+    "ini": "^3.0.1",
+    "lodash-es": "^4.17.21"
+  },
+  "devDependencies": {
+    "@types/ini": "^1.3.31",
+    "@types/lodash-es": "^4.17.6",
+    "prettier": "^2.7.1",
+    "typescript": "^4.8.2",
+    "vitest": "^0.22.1"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "printWidth": 120
+  }
+}
