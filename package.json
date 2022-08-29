@@ -15,7 +15,9 @@
     "node": ">=16"
   },
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "dev": "tsc -w",
+    "prepublishOnly": "tsc"
   },
   "dependencies": {
     "commander": "^9.4.0",
