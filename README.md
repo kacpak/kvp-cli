@@ -19,3 +19,16 @@ Commands:
   unset <config-file> <key>        removes key from file
   help [command]                   display help for command
 ```
+
+## Contributors
+
+This repo uses [changesets](https://github.com/changesets/changesets) to generate changelog and synchronize releases.
+
+Before pushing run `yarn changeset` to generate new changeset entry.
+
+To publish run
+
+- `yarn changeset version`
+- `git add . && git commit`
+- `yarn changeset publish`
+- `git push --follow-tags`
